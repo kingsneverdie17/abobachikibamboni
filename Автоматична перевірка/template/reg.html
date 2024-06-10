@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/main.css">
+  <title>Вхід в аккаунт</title> 
+</head>
+<body>
+  <br><br><br><br>
+  {% if problem %}
+  <p class="error">{{ problem }}</p>
+{% endif %}
+  <form action="/reg_user" method="post">
+      <input type="text" name="name" placeholder="Ваше ім'я та прізвище"><br><br>
+      <input type="text" name="password" placeholder="Ваш пароль"><br><br>
+      <input type="text" name="city" placeholder="Ваше місто"><br><br>
+      <button class="button" type="regin">Зарегеструватись</button><br><br>
+  </form>
+    <form action="/login">
+        <button class="button" type="login">Логін</button><br>
+    </form>
+</body>
+</html>

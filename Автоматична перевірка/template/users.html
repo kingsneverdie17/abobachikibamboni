@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Местна</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+
+<body>
+    <br><br><br><br>
+    <table style="width:100%">
+        <tr>
+            <th>Ім'я</th>
+            <th>Пароль</th>
+            <th>Місто</th>
+        </tr>
+        {%for user in users %}
+              <tr>
+                <td><center>{{user[0]}}</center></td>
+                <td><center>{{user[1]}}</center></td>
+                <td><center>{{user[2]}}</center></td>
+               </tr>
+          {%endfor%}
+        </table>
+    </body>
+</html>

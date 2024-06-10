@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>Профіль</title>
+</head>
+<body>
+    <h1>Ваш профіль</h1>
+    {% if submit %}
+    <h2 class="submit">{ submit }</h2>
+    {% endif %}
+    <p>Ваше ім'я: {{ user_data[0] }}</p>
+    <form method="post" action="/render_change">
+        <input type="invisible" name="change_name" id="change_name">
+        <button class="button" type="submit" name="change_name">Змінити ім'я</button></form>
+
+    <p>Пароль: {{ user_data[1] }}</p>
+    <form method="post" action="/render_change">
+        <input type="invisible" name="change_password" id="change_password">
+        <button class="button" type="submit" name="change_password">Змінити пароль</button></form>
+
+    <p>Місто: {{ user_data[2] }}</p>
+    <form method="post" action="/render_change">
+        <input type="invisible" name="change_city" id="change_city">
+        <button class="button" type="submit" name="change_city">Змінити місто</button></form>
+        
+</body>
+</html>

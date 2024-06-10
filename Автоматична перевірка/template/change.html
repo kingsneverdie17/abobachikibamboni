@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    {% if id == "password" %}
+        <title>Зміна паролю</title>
+    {% elif id == "name" %}
+        <title>Зміна ім'я</title>
+    {% elif id == "city" %}
+        <title>Зміна міста</title>
+    {% endif %}
+</head>
+<body>
+    <form action="/change" method="post">
+        {% if id == "password" %}
+            <input type="text" name="new_password" placeholder="Введіть ваш новий пароль"><br><br>
+        {% elif id == "name" %}
+            <input type="text" name="new_name" placeholder="Введіть ваше нове ім'я"><br><br>
+        {% elif id == "city" %}
+            <input type="text" name="new_city" placeholder="Введіть ваше нове місто"><br><br>
+        {% endif %}
+        <button class="button" type="regin">Змінити</button><br><br>
+    </form>
+</body>
+</html>

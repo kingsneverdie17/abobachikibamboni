@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Местна</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+
+<body>
+    <br><br><br><br>
+    <table style="width:100%">
+        <tr>
+            <th>Місто</th>
+            <th>Температура</th>
+            <th>Час</th> 
+        </tr>
+        {%for log in logs %}
+              <tr>
+                <td><center>{{log[0]}}</center></td>
+                <td><center>{{log[1]}}</center></td>
+                <td><center>{{log[2]}}</center></td>
+               </tr>
+          {%endfor%}
+        </table>
+    </body>
+</html>
